@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" type="image/png" href="/img/Logo.png">
+  <title>
+    Pavnam | Dashboard
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+  <!-- Nucleo Icons -->
+  <link href="/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/css/style.css" rel="stylesheet" />
+  <link href="/css/style1.css" rel="stylesheet">   
+</head>
+  <body>
+      <section class="hero-section d-flex justify-content-center align-items-center" style="padding-top: 80px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 mx-auto fade-in-center">
+
+                    <img src="/img/Logo.png">
+
+                    <h1 class="text-white text-center">Pavnam </h1>
+
+                    <!-- <h6 class="text-center">Mark of Purity in Vegetarian food</h6> -->
+                    
+                </div>
+                <h1 style="color: #13547a; text-align: center; padding-top: 20px;">Welcome to the Dashboard</h1>
+                <!--Admin Dashboard prompt-->
+                <div sec:authorize="hasAuthority('SUPERADMIN')">
+                  <h2 style="color: black; text-align: center;">SuperAdmin</h2>
+                  <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-3 fade-in-left" style="margin-top: 50px; ">
+                      <a class="btn custom-btn21"  href="/superadmin-dashboard" > Proceed to Dashboard</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-3 fade-in-right" style="margin-top: 50px;">
+                      <a class="btn custom-btn21"  href="/logout">Logout</a>
+                    </div>  
+                  </div>
+                </div>
+                <!--Dealers Dashboard prompt-->
+                <div sec:authorize="hasAuthority('ADMIN')">
+                  <h2 style="color: black; text-align: center;">Dealers Admin</h2>
+                  <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-3 fade-in-left" style="margin-top: 50px; ">
+                      <a class="btn custom-btn21"  href="/admin-dashboard" > Proceed to Dashboard</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-3 fade-in-right" style="margin-top: 50px;">
+                      <a class="btn custom-btn21"  href="/logout">Logout</a>
+                    </div>  
+                  </div>
+                </div>
+                <!--User Dashboard prompt-->
+                <div sec:authorize="hasAuthority('USERS')">
+                  <h2 style="color: black; text-align: center;">Certified Users</h2>
+                  <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-3 fade-in-left" style="margin-top: 50px; ">
+                      <a class="btn custom-btn21"  href="/dashboard" > Proceed to Dashboard</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-3 fade-in-right" style="margin-top: 50px;">
+                      <a class="btn custom-btn21"  href="/logout">Logout</a>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+  </body>
+</html>
+
+
+
+
+
+    <!-- <div sec:authorize="hasAuthority('SUPERADMIN')">
+        <h2>SuperAdmin Content</h2>
+        <p>This content is only visible to SuperAdmins.</p>
+        <a href="/superadmin-dashboard">Go to SuperAdmin Dashboard</a>
+    </div>
+
+    <div sec:authorize="hasAuthority('ADMIN')">
+        <h2>Admin Content</h2>
+        <p>This content is only visible to Administrators.</p>
+        <a href="/admin-dashboard">Go to Admin Dashboard</a>
+    </div>
+
+    <div sec:authorize="hasAuthority('USERS')">
+        <h2>User Content</h2>
+        <p>This content is only visible to Users.</p>
+        <a href="/dashboard">Go to User Dashboard</a>
+    </div>
+
+    <a href="/logout">Logout</a> -->

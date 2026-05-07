@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+ layout:decorator="layout">
+ 
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="/img/Logo.png">
+        <title>Dealers Dashboard | Profile</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+        <!-- Nucleo Icons -->
+        <link href="/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="/css/nucleo-svg.css" rel="stylesheet" />
+
+
+        <link href="/css/bootstrap-icons.css" rel="stylesheet" />
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="/css/style.css" rel="stylesheet" />    
+    </head>
+
+    <body class="g-sidenav-show  bg-gray-100">
+
+            <!--Side Nav Bar Start-->
+            <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2" id="sidenav-main">
+                <div class="sidenav-header">
+                    <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+                    <a class="navbar-brand px-4 py-3 m-0" href="">
+                        <img src="/img/Logo1.png" class="navbar-brand-img"  alt="main_logo">
+                        <span class="ms-1" style="font-size:larger; font-weight: 900;">Pavnam</span>
+                    </a>
+                </div>
+                <hr class="horizontal dark mt-0 mb-2">
+                <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/admin-dashboard">
+                                <i class="material-symbols-rounded opacity-5">dashboard</i>
+                                <span class="nav-link-text ms-1">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/certifiedUser">
+                                <i class="material-symbols-rounded opacity-5">receipt_long</i>
+                                <span class="nav-link-text ms-1">Certified Users</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/registerCertifiedUser">
+                                <i class="material-symbols-rounded opacity-5">view_in_ar</i>
+                                <span class="nav-link-text ms-1">Certificate Generator</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                            <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-5">Account page</h6>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" style="background-color: #ff7722;" href="/adminProfile">
+                                <i class="material-symbols-rounded opacity-5">person</i>
+                                <span class="nav-link-text ms-1">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+                    <div class="mx-3">
+                        <a class="btn w-100" style="background-color: #ff7722; color: white;" href="/logout">Logout</a>
+                    </div>
+                </div>
+            </aside>
+            <!--Side Nav Bar End-->
+            
+            <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+            
+                <!-- Navbar Start-->
+                <nav class="navbar navbar-main navbar-expand-lg px-0 mx-3 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+                    <div class="container-fluid py-1 px-3">
+                        <div class="mb-1 pb-0 pt-3 px-0 me-sm-10 me-5" >
+                            <h4 style="color: #13547a; "><span th:text="${dealer.fullName}"></span> Dashboard</h4>
+                        </div>
+                        
+                        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 justify-content-end" id="navbar">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb bg-transparent mb-1 pb-0 pt-1 px-0 me-sm-3 me-5">
+                                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript: ;">Dashboard</a></li>
+                                    <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Profile</li>
+                                </ol>
+                            </nav>
+                    
+                            <ul class="navbar-nav d-flex align-items-center  justify-content-end">
+                                <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                                    <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                        <div class="sidenav-toggler-inner">
+                                            <i class="sidenav-toggler-line"></i>
+                                            <i class="sidenav-toggler-line"></i>
+                                            <i class="sidenav-toggler-line"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+
+                <div class="container-fluid py-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-header p-3" style="background-color: #13547a;">
+                                    <h5 class="mb-0 text-white text-center">Profile Information</h5>
+                                </div>
+                
+                                <div class="card-body p-4">
+                                    <form th:attr="action=@{/api/dealers/{id}(id=${dealer.id})}" method="post" enctype="multipart/form-data" id="dealerForm">
+                                        <input type="hidden" name="_method" value="PUT">
+                                        
+                                        <!-- Profile Picture & Govt ID -->
+                                        <div class="row text-center">
+                                            <div class="col-12 col-md-6 mb-4">
+                                                <div class="position-relative mx-auto">
+                                                    <img th:src="@{'/api/dealers/' + ${dealer.id} + '/profilepic'}" alt="Profile Picture" id="profilePic" class="rounded-circle shadow-sm img-fluid" style="width: 250px; height: 250px;">
+                                                    <label for="profilePicInput" class="position-absolute bottom-0 mb-2 me-2 btn btn-sm btn-light rounded-circle shadow-sm" style="width: 35px; height: 35px; background-color: #13547a; padding-left: 8px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-camera" viewBox="0 0 16 16" >
+                                                            <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+                                                            <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                                        </svg>
+                                                        <input type="file" id="profilePicInput" name="profilepic" class="d-none" accept="image/*" onchange="previewImage(event, 'profilePic')">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 mb-4">
+                                                <div class="position-relative mx-auto">
+                                                    <img th:src="@{'/api/dealers/' + ${dealer.id} + '/govtIdFile'}" alt="Govt ID" id="govtIdFile" class="shadow-sm img-fluid" style="max-width: 100%; height: auto; max-height: 250px;">
+                                                    <label for="govtIdFileInput" class="position-absolute bottom-0 mb-2 me-2 btn btn-sm btn-light rounded-circle shadow-sm" style="width: 35px; height: 35px; background-color: #13547a; padding-left: 8px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-camera" viewBox="0 0 16 16" >
+                                                            <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+                                                            <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                                        </svg>
+                                                        <input type="file" id="govtIdFileInput" name="govtIdFile" class="d-none" accept="image/*" onchange="previewImage(event, 'govtIdFile')">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <!-- Personal Details -->
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <p><strong>Username:</strong> <span th:text="${dealer.username}"></span></p>
+                                                
+                                                <div class="form-group row">
+                                                    <label for="fullName" class="col-4 col-sm-3 col-form-label"><strong>Full Name:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="text" id="fullName" name="fullName" th:value="${dealer.fullName}" class="form-control" required readonly>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-sm btn-primary" onclick="makeEditable('fullName')" style="background-color: #13547a; color: white;">Edit</button>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="form-group row">
+                                                    <label for="mobile" class="col-4 col-sm-3 col-form-label"><strong>Mobile:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="text" id="mobile" name="mobile" th:value="${dealer.mobile}" class="form-control" required readonly>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-sm btn-primary" onclick="makeEditable('mobile')" style="background-color: #13547a; color: white;">Edit</button>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="form-group row">
+                                                    <label for="city" class="col-4 col-sm-3 col-form-label"><strong>City:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="text" id="city" name="city" th:value="${dealer.city}" class="form-control" required readonly>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-sm btn-primary" onclick="makeEditable('city')" style="background-color: #13547a; color: white;">Edit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-12 col-md-6">
+                                                <p><strong>Email:</strong> <span th:text="${dealer.email}"></span></p>
+                
+                                                <div class="form-group row">
+                                                    <label for="govtId" class="col-4 col-sm-3 col-form-label"><strong>Govt ID:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="text" id="govtId" name="govtId" th:value="${dealer.govtId}" class="form-control" required readonly>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-sm btn-primary" onclick="makeEditable('govtId')" style="background-color: #13547a; color: white;">Edit</button>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="form-group row">
+                                                    <label for="govtIdNumber" class="col-4 col-sm-3 col-form-label"><strong>Govt ID No:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="text" id="govtIdNumber" name="govtIdNumber" th:value="${dealer.govtIdNumber}" class="form-control" required readonly>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-sm btn-primary" onclick="makeEditable('govtIdNumber')" style="background-color: #13547a; color: white;">Edit</button>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="form-group row">
+                                                    <label for="state" class="col-4 col-sm-3 col-form-label"><strong>State:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="text" id="state" name="state" th:value="${dealer.state}" class="form-control" required readonly>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-sm btn-primary" onclick="makeEditable('state')" style="background-color: #13547a; color: white;">Edit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="address" class="col-form-label"><strong>Address:</strong></label>
+                                                    <input type="text" id="address" name="address" th:value="${dealer.address}" style="width: 83%; border: 0; font-size: 14px;" required readonly>
+                                                    <button type="button" class="btn btn-sm btn-primary mt-2" onclick="makeEditable('address')" style="background-color: #13547a; color: white;">Edit</button>
+                                                </div>
+                                            </div> 
+                                            
+                                            <div class="col-12 text-center">
+                                                <button type="button" class="btn text-white mt-3" style="background-color: #ff7722; width: 100%; max-width: 300px; margin-top: 30px;" onclick="confirmUpdate()">Update Profile</button>
+                                                <div th:if="${message}" class="alert alert-success mt-3" th:text="${message}"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="card border-0 shadow-lg mt-4">
+                                        <div class="card-header p-3" style="background-color: #13547a;">
+                                            <h5 class="mb-0 text-white text-center">Change Password</h5>
+                                        </div>
+                                        <div class="card-body p-4">
+                                            <form id="changePasswordForm">
+                                                <div class="form-group row input-group input-group-outline mb-3">
+                                                    <label for="currentPassword" class="col-4 col-sm-3 col-form-label"><strong>Current Password:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="password" id="currentPassword" name="currentPassword" class="form-control"  required>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" onclick="togglePasswordVisibility('currentPassword')" class="btn " style="background-color: #13547a; margin-bottom: 0; padding: 10px; margin-left: 5px; border-radius: 5px;">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-eye" viewBox="0 0 16 16" id="currentpassword">
+                                                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                                              </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row input-group input-group-outline mb-3">
+                                                    <label for="newPassword" class="col-4 col-sm-3 col-form-label"><strong>New Password:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="password" id="newPassword" name="newPassword" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" onclick="togglePasswordVisibility('newPassword')" class="btn" style="background-color: #13547a; margin-bottom: 0; padding: 10px; margin-left: 5px; border-radius: 5px;">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-eye" viewBox="0 0 16 16" id="newpassword">
+                                                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                                              </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row input-group input-group-outline mb-3">
+                                                    <label for="confirmPassword" class="col-4 col-sm-3 col-form-label"><strong>Confirm Password:</strong></label>
+                                                    <div class="col-6">
+                                                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-2">    
+                                                        <button type="button" onclick="togglePasswordVisibility('confirmPassword')" class="btn " style="background-color: #13547a; margin-bottom: 0; padding: 10px; margin-left: 5px; border-radius: 5px;">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-eye" viewBox="0 0 16 16" id="confirmpassword">
+                                                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                                              </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 text-center">
+                                                    <button type="button" class="btn text-white mt-3" style="background-color: #ff7722; width: 100%; max-width: 300px;" onclick="validateAndChangePassword()">Change Password</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </main>
+        <!--   Core JS Files   -->
+        <script src="/js/core/popper.min.js"></script>
+        <script src="/js/core/bootstrap.min.js"></script>
+        <script src="/js/plugins/perfect-scrollbar.min.js"></script>
+        <script src="/js/plugins/smooth-scrollbar.min.js"></script>
+        <script src="/js/plugins/chartjs.min.js"></script>
+        <script src="/js/main.js"></script>
+        <script>
+            function makeEditable(fieldId) {
+                const field = document.getElementById(fieldId);
+                field.readOnly = false;
+                field.focus();
+            }
+
+            function previewImage(event, imgId) {
+                const img = document.getElementById(imgId);
+                img.src = URL.createObjectURL(event.target.files[0]);
+            }
+
+            function confirmUpdate() {
+                const confirmation = confirm("Are you sure you want to update your profile?");
+                if (confirmation) {
+                    document.getElementById('dealerForm').submit();
+                }
+            }
+            function togglePasswordVisibility(fieldId) {
+                const passwordField = document.getElementById(fieldId);
+                const currentType = passwordField.getAttribute('type');
+                
+                if (currentType === 'password') {
+                    passwordField.setAttribute('type', 'text');
+                } else {
+                    passwordField.setAttribute('type', 'password');
+                }
+            }
+
+        </script>
+        <script>
+            function validateAndChangePassword() {
+                const newPassword = document.getElementById('newPassword').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+        
+                if (newPassword !== confirmPassword) {
+                    alert("New password and confirm password do not match.");
+                    return;
+                }
+        
+                if (newPassword.length < 8) {
+                    alert("Password must be at least 8 characters long.");
+                    return;
+                }
+        
+                // If validation passes, submit the form
+                changePassword();
+            }
+        
+            function changePassword() {
+                const currentPassword = document.getElementById('currentPassword').value;
+                const newPassword = document.getElementById('newPassword').value;
+
+                const data = {
+                    currentPassword: currentPassword,
+                    newPassword: newPassword
+                };
+
+                fetch('/api/dealers/change-password', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(err => { throw new Error(err.message); });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    alert(data.message); // Show success message
+                    window.location.reload(); // Reload the page
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("An error occurred: " + error.message);
+                });
+            }
+        </script>
+
+    </body>
+</html>

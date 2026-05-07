@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link rel="icon" type="image/png" href="/img/Logo.png">
+        <title>Pavnam | Veg Revolution </title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/css/animations.css" rel="stylesheet">
+
+        <link href="/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="/css/style1.css" rel="stylesheet">
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <!-- Navigation Bar Start-->
+            <nav class="navbar navbar-expand-lg" >
+                <div class="container d-flex align-items-center">
+                    <a class="navbar-brand" href="/">
+                        <img src="/img/Logo.png">
+                        <span style="color: #13547a;">पावनम्</span>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/certification">About Certification</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/about">About us</a>
+                            </li>
+
+                           <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/vegrevolution">Veg Revolution</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/supporting">Supporting Cause</a>
+                            </li>                            
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/faq">FAQs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/contact">Contact us</a>
+                            </li>
+
+                            <li class="nav-item" style="margin-top: 5px; margin-left: 20px;">
+                                <a class="btn custom-btn1" href="/certification#applyForm">Apply Now</a>
+                            </li>
+
+                            <li class="nav-item" style="margin-top: 5px; margin-left: 20px;">
+                                <a class="btn custom-btn1" href="/pavnamcms">Login <i class="bi bi-person-circle"></i> </a>
+                            </li>
+                        </ul>
+  
+                    </div>
+                </div>
+            </nav>
+            <!--Navigation Bar END-->
+
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-5 col-12 mb-5 fade-in-left">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+
+                                    <li class="breadcrumb-item active" aria-current="page">Veg Revolution</li>
+                                </ol>
+                            </nav>
+                            <h2 class="text-white">Vegetarian Revolution</h2>
+                        </div>
+
+                        <div class="col-lg-5 col-12 fade-in-right">
+                            <div class="topics-detail-block">
+                                <img src="/img/vegrevolution.jpg" class="topics-detail-block-image img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <!--Main Section Start-->
+            <section class="expandable-section" id="didyouknow">
+                <div class="container py-4">
+                    <h2 class="mb-4 text-center">Did you know?</h2>
+                    <p class="text-center">Discover the Power of Plant-Based Food, Explore Its Rich History, and Get Inspired by Incredible Stories</p>
+                    <div class="line"></div>
+                </div>
+            
+                <div class="container-fluid py-4">
+                    <div class="row justify-content-center">
+                        
+
+                        <!-- Content Box 1 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/vegbenefits.jpg" class="card-img" alt="Veg India">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Benefits of Pure Vegetarian Food</h5>
+                                            <p class="card-text short-content">Pure vegetarian food supports a healthy heart by reducing cholesterol levels and lowers the risk of chronic diseases like diabetes, hypertension, and obesity. Packed with essential nutrients, fiber, and antioxidants, a vegetarian diet promotes better digestion, boosts immunity, and enhances overall well-being. Choosing plant-based foods contributes to environmental sustainability by reducing carbon footprints.
+                                            </p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 1 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+                                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body3">
+                                                    <h5 class="card-title1">Health Benefits</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Weight Management</b>
+                                                        <br><br><b>•	Low Caloric Density:</b> Vegetarian diets focus on foods like fruits, vegetables, and whole grains, which are naturally lower in calories but high in volume. This helps you feel full while consuming fewer calories, promoting healthy weight control.
+                                                        <br><br><b>•	Nutrient-Dense:</b> Foods like leafy greens, avocados, nuts, and seeds pack essential nutrients like vitamins, minerals, and healthy fats. This ensures you get proper nourishment without the extra empty calories often found in processed and high-fat animal-based foods.
+                                                        <br><br><br><b>Better Digestive Health</b>
+                                                        <br><br><b>•	Rich in Fiber:</b> Vegetables, legumes, and whole grains contain dietary fiber, which improves bowel regularity, prevents constipation, and supports overall gut health.
+                                                        <br><br><b>•	Gut Microbiota Support:</b> Fiber acts as a prebiotic, feeding the good bacteria in your gut, which improves digestion, immunity, and nutrient absorption.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body3">
+                                                    <h5 class="card-title1">Health Benefits</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Heart Health</b>
+                                                        <br><br><b>    •	Low in Saturated Fat:</b> Plant-based diets reduce saturated fat intake, lowering LDL ("bad") cholesterol and reducing the risk of heart attacks and strokes.
+                                                        <br><br><b>    •	Rich in Potassium:</b> Foods like bananas, sweet potatoes, and spinach are rich in potassium, which helps maintain healthy blood pressure by counteracting sodium's effects.
+                                                        <br><br><br><b>    Disease Prevention</b>
+                                                        <br><br><b>    •	Lower Risk of Chronic Diseases:</b> Vegetarian diets are associated with a lower risk of type 2 diabetes, certain cancers (like colorectal and breast cancer), and hypertension due to the anti-inflammatory and antioxidant properties of plant foods.
+                                                        <br><br><b>    •	Antioxidants:</b> Found in colorful fruits and vegetables, antioxidants like vitamin C, E, and carotenoids protect cells from damage caused by free radicals, slowing aging and reducing disease risk.
+                                                        <br><br><br><b>    Improved Energy Levels</b>
+                                                        <br><br>    •	Whole plant foods provide sustained energy due to their complex carbohydrates, steadying blood sugar levels and reducing fatigue compared to the spikes caused by sugary or processed foods.
+                                                                
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body3">
+                                                    <h5 class="card-title1">Environmental Benefits</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Reduced Carbon Footprint</b>
+                                                        <br><br>    •	Meat production generates significantly more greenhouse gases (e.g., methane and CO2) than growing plants. By eating vegetarian, you contribute to reducing emissions and combating global warming.
+                                                        <br><br><br><b>    Conservation of Natural Resources</b>
+                                                        <br><br>   •	Producing plant-based food uses less water and land compared to animal farming. For instance, growing vegetables uses far less water than producing beef. Additionally, a vegetarian lifestyle reduces deforestation, as less land is needed for livestock grazing or growing animal feed.                                                            
+                                                        <br><br><br><b>Longevity</b>
+                                                        <br><br>•	Studies from areas known as "Blue Zones," where people live significantly longer, show that plant-based diets play a crucial role in their longevity. Avoiding processed meats and saturated fats while focusing on nutrient-rich foods reduces the risk of life-threatening illnesses, leading to a longer and healthier life.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+
+                                    <!--Row 2 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Ethical and Spiritual Benefits</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Compassion and Animal Welfare</b>
+                                                        <br><br>•	A vegetarian diet avoids supporting industries involved in the exploitation and suffering of animals. It promotes ethical living, aligning with the values of kindness and empathy.
+                                                        <br><br><br><b>Spiritual Purity</b>
+                                                        <br><br>•	Many spiritual traditions, including those in India, promote vegetarianism as a way to maintain "satvik" (pure) energy. Consuming plant-based foods is believed to enhance mental clarity, emotional balance, and spiritual awareness, fostering inner peace.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Economic Benefits</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Cost-Effective</b>
+                                                        <br><br>•	Plant-based foods such as lentils, beans, and seasonal vegetables are generally cheaper than animal products like meat, poultry, and seafood. They are also easier to store, reducing food waste and costs.
+                                                        <br><br><br><b>Sustainable Food Practices</b>
+                                                        <br><br>•	Vegetarian diets encourage the use of locally grown and seasonal produce, which supports local farmers and reduces dependency on expensive imported goods. This, in turn, boosts the local economy while being environmentally friendly.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Mental and Emotional Well-being</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Mood Enhancement</b> 
+                                                            <br><br>•	Plant-based diets often include foods rich in magnesium, folate, and omega-3 fatty acids (from sources like flaxseeds and walnuts), which have been shown to improve mood and reduce symptoms of stress and anxiety.
+                                                            <br><br><br><b>Cognitive Function</b> 
+                                                            <br><br>•	Vegetables, nuts, and berries are packed with antioxidants and essential fatty acids that protect the brain from oxidative stress and inflammation. They can enhance memory and lower the risk of age-related mental decline, such as Alzheimer's disease.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 2 End-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box 1 End -->
+ 
+ 
+                        <!-- Content Box 2 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/gym.jpg" class="card-img" alt="Fitness with Veg">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Fitness with Vegetarian Food</h5>
+                                            <p class="card-text short-content">A pure vegetarian diet can be a powerful ally for anyone pursuing fitness goals, whether it’s building muscle, losing fat, or maintaining overall health. Many people mistakenly believe that a vegetarian diet is incompatible with gym training or muscle-building. However, a well-balanced vegetarian diet can provide all the nutrients your body needs to perform well at the gym, recover from workouts, and achieve fitness goals. </p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 2 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body1">
+                                                    <h5 class="card-title1">Vegetarian Sources of Protein</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Contrary to the myth that vegetarians can't get enough protein, there are plenty of plant-based protein sources that can help build muscle. Some of the best vegetarian protein sources include:
+                                                        <br><br><b>•	Lentils, beans, and chickpeas:</b> High in protein and fiber, they are perfect for muscle repair and growth.
+                                                        <br><br><b>•	Tofu and tempeh:</b> These soy-based products are rich in protein and can be used in various dishes.
+                                                        <br> <br><b>•	Quinoa:</b> A complete protein source that contains all nine essential amino acids, making it great for muscle recovery.
+                                                        <br><br><b>•	Greek yogurt (if dairy is included in your diet):</b> High in protein and calcium, it supports both muscle growth and bone health.
+                                                        <br><br><b>•	Nuts and seeds (almonds, chia seeds, pumpkin seeds, hemp seeds):</b> Provide healthy fats along with protein, which supports muscle repair and energy.
+                                                        <br><br><b>•	Edamame:</b> Young soybeans, often found in health-conscious diets, are high in protein.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body1">
+                                                    <h5 class="card-title1">Balanced Diet for Energy and Performance</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Protein Timing and Dosage:</b> The key to maximizing muscle gains on a vegetarian diet is ensuring you're consuming protein consistently throughout the day. Aiming for 20–30 grams of protein per meal can help with muscle synthesis.
+                                                        <br><br><b>•	Complex Carbohydrates for Sustained Energy:</b> Carbohydrates are the primary energy source for your body, especially when performing high-intensity workouts. Vegetarian sources of complex carbs, such as whole grains (brown rice, oats, quinoa), sweet potatoes, vegetables, and fruits, can provide long-lasting energy for both strength training and endurance workouts.
+                                                        <br><br><b>•	Healthy Fats for Hormone Production and Recovery:</b> Fats are crucial for producing hormones like testosterone, which plays a role in muscle growth. Healthy fats can be found in foods like avocados, nuts, seeds, and olive oil. Omega-3 fatty acids, found in chia seeds, flaxseeds, and walnuts, also have anti-inflammatory properties that aid in recovery.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body1">
+                                                    <h5 class="card-title1">Micronutrients for Overall Health</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Iron:</b> Many vegetarians worry about getting enough iron, but there are several vegetarian sources of iron such as spinach, lentils, tofu, chickpeas, pumpkin seeds, and fortified cereals. Combining iron-rich foods with vitamin C (found in citrus fruits, tomatoes, and peppers) helps improve iron absorption.
+                                                        <br><br><b>•	Calcium:</b> Vegetarians, particularly vegans, might need to ensure they're getting enough calcium for strong bones. Leafy greens, tofu, almonds, and fortified plant-based milks are excellent sources of calcium.
+                                                        <br><br><b>•	Vitamin B12:</b> This vitamin is primarily found in animal products, so vegetarians should include fortified cereals, nutritional yeast, and plant-based milk to meet their B12 requirements.
+                                                        <br><br><b>•	Zinc:</b> Zinc plays a role in immune function, protein synthesis, and muscle repair. Vegetarian sources of zinc include legumes, pumpkin seeds, chickpeas, and tofu.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+
+                                    <!--Row 2 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Vegetarian Diet for Weight Management and Fat Loss</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Low in Saturated Fats:</b> A vegetarian diet, especially when focused on whole, plant-based foods, tends to be lower in unhealthy saturated fats compared to a typical meat-heavy diet. This can aid in weight management and fat loss.
+                                                        <br><br><b>•	High Fiber for Satiety:</b> Fiber-rich foods such as fruits, vegetables, whole grains, and legumes help with satiety, meaning you feel fuller for longer. This reduces the chances of overeating, which is beneficial for weight management.
+                                                        <br><br><b>•	Reducing Inflammation:</b> A vegetarian diet that is rich in antioxidants (from fruits and vegetables) and omega-3 fatty acids can help reduce inflammation, which is key to faster recovery after workouts and maintaining an active lifestyle.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Vegetarian Supplements for Gym-goers</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Plant-Based Protein Powders:</b> For those who find it challenging to meet protein needs through whole foods, plant-based protein powders made from pea protein, hemp protein, or brown rice protein are a great supplement. They provide a convenient, high-quality source of protein for post-workout recovery.
+                                                        <br><br><b>•	Creatine:</b> While creatine is found in animal products, vegetarians can still take creatine supplements to improve their strength, endurance, and muscle growth. It's a safe and effective supplement that can benefit gym-goers who are looking to enhance their performance.
+                                                        <br><br><b>•	Branched-Chain Amino Acids (BCAAs):</b> These essential amino acids are crucial for muscle recovery and reducing muscle breakdown. BCAA supplements can be beneficial for vegetarians to ensure they are supporting muscle repair after intense workouts.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Hydration and Recovery for Vegetarians</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Hydration:</b> Drinking enough water is essential for everyone, but vegetarians may need to ensure they’re also getting sufficient electrolytes, especially after strenuous workouts. Incorporating coconut water, fruits, and vegetables like cucumber and watermelon can help maintain hydration and electrolyte balance.
+                                                        <br><br><b>•	Recovery Foods:</b> After a workout, focus on meals that combine protein and carbohydrates for optimal recovery. For instance, a smoothie made with plant-based protein powder, almond milk, spinach, and bananas can provide the nutrients needed for muscle repair and energy replenishment.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 2 End-->
+
+                                    <!--Row 3 Start-->
+                                    <div class="row g-4">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Inspiration from Professional Athletes and Bodybuilders</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Vegan and Vegetarian Athletes:</b> Many professional athletes and bodybuilders follow plant-based diets to maintain their strength, stamina, and fitness levels. Examples include:
+                                                        <br><br>o	Patrik Baboumian, one of the world’s strongest men, who is a vegan.
+                                                        <br><br>o	Nimai Delgado, a vegan bodybuilder who promotes plant-based fitness.
+                                                        <br><br>o	Venus Williams, who switched to a raw vegan diet to improve her performance on the tennis court.
+                                                        <br><br>•	These athletes and others have demonstrated that it’s possible to excel in demanding physical activities while maintaining a vegetarian or vegan lifestyle.                                                        
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Easy Vegetarian Recipes for Gym Enthusiasts</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Post-Workout Power Bowl:</b> A combination of quinoa, roasted chickpeas, spinach, avocado, and tahini dressing provides a nutrient-packed meal with ample protein, carbs, and healthy fats.
+                                                        <br><br><b> •	Lentil and Sweet Potato Stew:</b> A hearty dish loaded with plant protein and fiber that aids in muscle repair and replenishment of glycogen stores after a workout.
+                                                        <br><br><b>•	Tofu Stir-fry:</b> A quick and easy stir-fry with tofu, mixed vegetables, and brown rice, offering protein, healthy fats, and fiber for recovery.                                                        
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Vegetarianism and Fitness Go Hand in Hand</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Incorporating vegetarian food into your diet doesn’t mean sacrificing muscle growth, energy levels, or overall fitness. With the right planning, a vegetarian diet can provide all the necessary nutrients for achieving fitness goals, from strength training to endurance sports. By consuming a variety of plant-based proteins, healthy fats, and complex carbohydrates, you can fuel your body for optimal performance in the gym and beyond. Whether you’re building muscle, maintaining a healthy weight, or looking for overall wellness, a vegetarian diet can help you achieve your fitness goals sustainably and ethically.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 3 End-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box 2 End -->
+            
+
+                        <!-- Content Box 3 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/vegindia.jpg" class="card-img" alt="Veg India">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">India is the Largest Consumer of Veg Food</h5>
+                                            <p class="card-text short-content">India is indeed one of the largest consumers of vegetarian food in the world, and this is largely due to its historical, cultural, religious, and geographical factors. Here's an in-depth look at why India has such a significant vegetarian food culture and consumption pattern </p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 3 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body3">
+                                                    <h5 class="card-title1">Religious Influence</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Hinduism:</b> Hinduism, which is the largest religion in India, has deep philosophical and ethical roots in vegetarianism. The concept of Ahimsa (non-violence) is central to Hindu beliefs, advocating the avoidance of harm to all living beings. This has led to a widespread vegetarian diet among Hindus, particularly in regions like Gujarat, Rajasthan, Maharashtra, and Uttar Pradesh.
+                                                        <br><br><b>•	Jainism:</b> Jainism is one of the most influential religions promoting vegetarianism. Jains follow a strict form of Ahimsa, which not only prohibits the killing of animals but also minimizes harm to even microorganisms. As a result, Jainism has fostered one of the most vegetarian communities in India. Jains make up a small but highly influential community, and their dietary practices influence vegetarianism across the country.
+                                                        <br> <br><b>•	Buddhism:</b> Although Buddhism does not have dietary laws as stringent as Jainism, the religion also emphasizes compassion and non-violence, which contributed to the popularity of vegetarianism in Buddhist regions like Ladakh, Sikkim, and parts of Maharashtra.
+                                                        <br><br><b>•	Sikhism:</b> Sikhism, another major religion in India, does not mandate vegetarianism, but the practice of Langar (community kitchen) in Gurdwaras is typically vegetarian, providing meals for people of all faiths. This practice encourages vegetarian food habits in the Sikh community.                                                        
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body3">
+                                                    <h5 class="card-title1">Cultural and Regional Practices</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Traditional Diets:</b> India has a long history of vegetarian culinary traditions. Many of the oldest and richest food cultures in India, such as those from Gujarat, Tamil Nadu, and Rajasthan, have developed around plant-based ingredients, with an emphasis on legumes, grains, vegetables, and fruits. Vegetarian dishes like dal, sabzi, roti, dosa, idli, and samosas are not only common but form the core of daily meals in many households.
+                                                        <br><br><b>•	Geographical Factors:</b> India’s diverse climate and geography have also contributed to vegetarianism. In the fertile plains and valleys, grains and vegetables grow in abundance, while coastal regions like Kerala and West Bengal, with access to seafood, have traditionally consumed more fish. However, in the interior regions, agriculture is more focused on plant-based food production, which has led to a greater consumption of vegetarian food.
+                                                        <br><br><b>•	Economic Factors:</b> In rural areas, especially in regions where people rely on agriculture for their livelihood, animal husbandry may not be feasible due to economic or ecological reasons, leading people to depend primarily on plant-based food. This is reflected in the majority of the population, particularly in rural areas, consuming a largely vegetarian diet.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body3">
+                                                    <h5 class="card-title1">Health Considerations</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Perception of Vegetarianism as Healthy:</b> Many Indians consider vegetarian food to be healthier, as it is often seen as lighter, more digestible, and nutritionally balanced. Traditional vegetarian Indian diets are rich in vegetables, legumes, and whole grains, which are high in fiber, vitamins, and antioxidants. Vegetarian diets are often associated with lower risks of certain diseases, such as heart disease, diabetes, and obesity, which has led to an increasing trend of adopting plant-based diets in urban areas.
+                                                        <br><br><b>•	Vegetarian Food in Ayurvedic Tradition:</b> Indian medicine, especially Ayurveda, has long advocated the consumption of vegetarian food for its balance of the body’s elements. Ayurveda emphasizes the importance of consuming foods that are fresh, seasonal, and plant-based, and that promote physical and mental well-being.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+
+                                    <!--Row 2 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Global Trends and Awareness</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Rise of Health Consciousness:</b> With the increasing awareness about the negative environmental and health impacts of consuming animal products, many Indians are shifting toward vegetarian diets. Issues like animal cruelty, factory farming, and climate change are pushing people to reconsider their dietary choices.
+                                                        <br><br><b>•	Plant-Based Revolution:</b> The rise of global vegetarian and vegan food movements has also influenced the consumption of vegetarian food in India. International companies like Beyond Meat and Impossible Foods, which promote plant-based alternatives to meat, have contributed to the global push for vegetarian diets. Many Indians are now exploring vegetarian options as part of a broader health-conscious movement.      
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Vegetarian Food Industry in India</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Food Market:</b> India is home to a massive and diverse vegetarian food market, which includes everything from traditional home-cooked meals to restaurant offerings and packaged vegetarian foods. The popularity of vegetarian restaurants and fast food chains serving vegetarian fare, such as Sagar Ratna, Saravana Bhavan, and Haldiram’s, shows the broad acceptance and demand for vegetarian food.
+                                                        <br><br><b>•	Innovation in Vegetarian Cuisine:</b> Many Indian food companies are innovating within the vegetarian sector, creating plant-based products that resemble meat, such as plant-based keema, kebabs, and chicken nuggets. These products cater to both the traditional vegetarian consumer and those looking to transition to a meat-free diet.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Vegetarianism as a Lifestyle Choice</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Vegetarianism Among Youth and Professionals:</b> In recent years, vegetarianism has seen a resurgence among younger generations, especially in metropolitan cities. Increasingly, urban professionals, students, and influencers are turning to vegetarian or plant-based diets not only for ethical and health reasons but also as part of a lifestyle choice aligned with global environmental sustainability movements.
+                                                        <br><br><b>•	Celebrity Influence:</b> Many Bollywood actors, sports personalities, and influencers in India advocate vegetarianism as part of their lifestyle. Prominent figures like Virat Kohli, Alia Bhatt, Amitabh Bachchan, and Shahid Kapoor openly endorse vegetarian diets, further promoting the idea that vegetarianism is a modern, healthy, and sustainable choice. 
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 2 End-->
+
+                                    <!--Row 3 Start-->
+                                    <div class="row g-4">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Cultural Celebrations and Vegetarianism</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Festivals and Vegetarianism:</b> Many Indian festivals are celebrated with a strong emphasis on vegetarian food. Festivals like Diwali, Navratri, and Durga Puja involve fasting and offering vegetarian food to deities. Pongal, Makar Sankranti, and Baisakhi also feature traditional vegetarian food that is prepared and shared with family and community members.
+                                                        <br><br><b>•	Cultural Identity:</b> For many communities, vegetarianism is not just a dietary practice but a reflection of their cultural and spiritual identity. This is particularly true for communities such as the Brahmins, Vaishnavas, and Jains, who consider vegetarianism a core part of their traditions.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">India’s Leading Role in Vegetarian Food Consumption</h5>
+                                                    <p class="paragraph1">
+                                                        <br>India’s status as one of the largest consumers of vegetarian food is a result of a combination of historical, cultural, and religious factors. While non-vegetarianism has a presence in certain regions, vegetarianism is deeply rooted in Indian culture, with the country home to a wide variety of plant-based food traditions and innovations. This makes India not only a global leader in vegetarian consumption but also a central figure in the global plant-based food movement.
+                                                            With a growing focus on health, ethics, and sustainability, India’s vegetarian food culture is likely to continue to flourish, contributing to a broader global shift toward more sustainable and humane eating practices.                                                                                                               
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 3 End-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box 3 End -->
+
+
+                        <!-- Content Box 4 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/vegorigin.jpg" class="card-img" alt="Veg India">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Origin of pure vegetarian food </h5>
+                                            <p class="card-text short-content">The origin of pure vegetarian food as a practice is deeply rooted in ancient cultures, spiritual traditions, and ethical considerations across the world, with significant emphasis in India. Here's an exploration of how the concept of vegetarianism began and evolved </p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 4 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Roots in Ancient India</h5>
+                                                    <p class="paragraph1">
+                                                        <br>The practice of vegetarianism in India is one of the oldest documented in human history, dating back to around 2500–1500 BCE during the Indus Valley Civilization and the subsequent Vedic era. Early Vedic texts like the Rigveda reflected an agrarian society where plant-based foods were primary
+                                                        <br><br><b>•	Ahimsa (Non-Violence):</b> Vegetarianism gained prominence with the principle of ahimsa—non-violence toward all living beings. This principle became integral to religions such as Jainism, Buddhism, and later Hinduism. The idea was that every living being has a soul and should not be harmed unnecessarily.
+                                                        <br><br><b>•	Sacred Cow Concept:</b> Ancient Vedic traditions revered the cow as sacred, associating it with wealth, fertility, and life itself. This reverence led to the avoidance of consuming beef and encouraged dairy and plant-based diets.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Jainism’s Emphasis on Vegetarianism</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Jainism, which emerged around the 6th century BCE, established one of the earliest strict codes of vegetarianism. Jain teachings emphasized:
+                                                        <br><br>•	Avoiding harm to any living being, including microorganisms.
+                                                        <br><br>•	Following a plant-based diet that excludes root vegetables (e.g., onions, garlic, potatoes) to avoid harming underground organisms.
+                                                        <br><br>The Jain community institutionalized vegetarianism as a core spiritual practice and influenced neighboring communities.   
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Buddhism and Vegetarianism</h5>
+                                                    <p class="paragraph1">
+                                                        <br>With the rise of Buddhism in the 6th century BCE, the teachings of Gautama Buddha reinforced compassion for all sentient beings. While not all Buddhists strictly adhered to vegetarianism, many sects, particularly in East Asia, adopted a vegetarian lifestyle influenced by the concept of karuna (compassion).
+                                                        <br><br><b>•	Monastic Rules:</b> Buddhist monks and nuns were often vegetarian, relying on simple, plant-based diets as part of their vows of non-violence.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+
+                                    <!--Row 2 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">The Spread of Vegetarianism Through Hinduism</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Hinduism, with its emphasis on dharma (righteous living) and karma (actions and their consequences), encouraged vegetarianism as a sattvic (pure) diet that supported spiritual growth.
+                                                        <br><br><b>•	Sattvic Food:</b> The concept of sattvic food, which avoids meat, alcohol, and overly spiced or processed items, emerged as an ideal way to purify the mind and body.
+                                                        <br><br><b>•	Texts and Scriptures:</b> Hindu scriptures like the Manusmriti and Bhagavad Gita highlighted the moral and spiritual benefits of non-violence and vegetarianism.                                                            
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Vegetarian Movements in the Western World</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Although vegetarianism has its strongest roots in India, the practice also existed in ancient Greece and Rome, often tied to philosophical traditions.
+                                                        <br><br><b>•	Pythagoras (6th Century BCE):</b> The Greek philosopher Pythagoras advocated vegetarianism, believing in the transmigration of souls and the ethical treatment of animals.
+                                                        <br><br><b>•	Roman Influence:</b> Many Roman philosophers, including Plutarch and Seneca, practiced vegetarianism as an ethical choice.
+                                                        <br><br>The modern vegetarian movement in the West grew during the 19th and 20th centuries, influenced by Indian thinkers like Swami Vivekananda and Mahatma Gandhi.        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Vegetarianism in Religious Reforms</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Several reform movements, both in India and abroad, revitalized vegetarianism by highlighting its moral, spiritual, and environmental benefits:
+                                                        <br><br><b>•	Emperor Ashoka’s Reforms (3rd Century BCE):</b> After the Kalinga War, Ashoka embraced Buddhism and banned animal sacrifices, advocating kindness to all beings.
+                                                        <br><br><b>•	The Bhakti Movement (15th–17th Century):</b> Saints like Kabir, Mirabai, and Guru Nanak promoted vegetarianism as part of their devotional practices.                                                            
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 2 End-->
+
+                                    <!--Row 3 Start-->
+                                    <div class="row g-4">
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Scientific and Ethical Foundations</h5>
+                                                    <p class="paragraph1">
+                                                        <br>In more recent history, vegetarianism has expanded beyond religious or cultural reasons:
+                                                        <br><br><b>•	Health Benefits:</b> As studies showed the health benefits of a plant-based diet, vegetarianism became associated with longevity, reduced risk of chronic diseases, and overall well-being.
+                                                        <br><br><b>•	Ethical Awareness:</b> The ethical treatment of animals and concerns about industrial farming methods have further propelled vegetarianism.
+                                                        <br><br><b>•	Environmental Concerns:</b> With growing awareness of climate change and resource conservation, vegetarianism is increasingly seen as a sustainable lifestyle choice.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Conclusion: Origin of vegetarianism</h5>
+                                                    <p class="paragraph1">
+                                                        <br>The origin of vegetarianism is deeply tied to the universal values of compassion, non-violence, and respect for life. While ancient India played a foundational role in formalizing vegetarian practices through its spiritual traditions, these principles have resonated across the world, influencing countless individuals and societies. Today, the rise of vegetarianism and veganism globally reflects an enduring commitment to health, ethics, and environmental sustainability.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 3 End-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box 4 End -->
+
+                        <!-- Content Box 5 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/nonvegindia.jpg" class="card-img" alt="Fitness with Veg">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">History of non-vegetarian culture in India </h5>
+                                            <p class="card-text short-content">The history of non-vegetarian culture in India is deeply intertwined with the country's diverse religious, cultural, and geographical landscape. While vegetarianism has been an important part of many Indian traditions, particularly in regions like Gujarat, Rajasthan, and parts of South India, non-vegetarianism has also had a significant presence. Here’s how non-vegetarian culture developed in India</p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 5 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Medieval Period: Influence of Muslim and Persian Culture</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Mughal Empire:</b> The arrival of Muslim rulers, particularly the Mughals, brought significant changes to India's dietary culture. The Mughal emperors, such as Akbar and Shah Jahan, were known for their love of elaborate feasts that included meat dishes, such as kebabs, biryani, and mutton stew. This influenced the royal courts and urban centers, and non-vegetarian food began to be integrated into the cuisine of the Mughal-ruled regions, particularly in North India.
+                                                        <br><br><b>•	Persian Influence:</b> The Mughal court brought Persian culinary traditions, where the consumption of meats such as mutton, chicken, and game animals became an integral part of the diet. Persian-inspired dishes like korma, nihari, and shami kebab became popular and spread to other parts of India.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Regional Differences in Non-Vegetarianism</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Southern India and Coastal Regions:</b> In southern states like Kerala, Tamil Nadu, and Andhra Pradesh, where the geography was suited for coastal trade and fishing, seafood has been a major part of the diet for centuries. The coastal communities in Kerala, for example, have long consumed fish, and the famous Kerala-style fish curry is a staple. Similarly, in Bengal, fish and prawns are deeply embedded in the culture, as the region has abundant freshwater sources.
+                                                        <br><br><b>•	Tribal and Rural Communities:</b> In the tribal regions of India, where food security was historically tied to hunting and gathering, non-vegetarian diets were more common. Tribal communities in central India and northeastern states consumed a variety of meats, including wild animals, poultry, and fish.                                                            
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">British Colonial Influence</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Colonial Era:</b> During the British colonial period, there was an introduction of Western-style foods in the Indian subcontinent. The British colonizers, who had a strong meat-eating culture, further propagated the consumption of meat in urban centers. The introduction of processed meats, canned foods, and the establishment of meat markets also led to increased consumption of meat among the Indian upper classes, particularly in cities like Calcutta and Bombay.
+                                                        <br><br><b>    •	Culinary Fusion:</b> British influence also led to the blending of European culinary traditions with Indian cuisine. Dishes like Chicken Tikka Masala were later created as a fusion of British and Indian flavors, incorporating meats into traditional Indian spices and cooking techniques.                                                            
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+
+                                    <!--Row 2 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Modern Times: Changing Perceptions and Globalization</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>•	Post-Independence Era:</b> After independence, India's food culture continued to evolve, with a growing trend toward non-vegetarianism in urban centers, especially among the younger generation and professionals who were exposed to global dietary trends. While vegetarianism remains dominant in many parts of the country, there has been a noticeable increase in the consumption of chicken, fish, and mutton in metropolitan cities, influenced by globalization and the spread of fast food culture.
+                                                        <br><br><b>•	Globalization and International Influence:</b> The rise of fast food chains and Westernized eating habits, such as the consumption of hamburgers, fried chicken, and pizzas, has contributed to a growing non-vegetarian trend among younger people in India. Moreover, the international popularity of cuisines like Chinese, Middle Eastern, and American fast food has also promoted the idea of meat-eating, especially chicken and beef.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Health and Environmental Factors</h5>
+                                                    <p class="paragraph1">
+                                                        <br>In recent years, the consumption of non-vegetarian food in India has also been influenced by the increasing awareness of health and environmental issues. The global awareness of climate change, the ethical implications of factory farming, and the health risks associated with excessive meat consumption have caused many people in India to reconsider their diets. This has led to a rise in the popularity of plant-based foods, even in traditionally non-vegetarian areas.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">A Complex and Evolving Tradition</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Conclusion: A Complex and Evolving Tradition
+                                                        The history of non-vegetarianism in India is not linear, as it involves a complex interplay of religious beliefs, regional customs, historical events, and cultural exchanges. While vegetarianism was advocated by ancient spiritual traditions and has remained strong in many parts of the country, non-vegetarianism has also had a significant cultural presence due to historical invasions, religious influences, regional diets, and colonial legacies.
+                                                        The trend toward vegetarianism and non-violence continues to grow in India, influenced by both ancient traditions and modern concerns about health, sustainability, and ethics. As such, India presents a unique and evolving food culture that blends both vegetarian and non-vegetarian traditions.                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 2 End-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box 5 End -->
+
+
+
+                        <!-- Content Box 6 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/maharaja.jpg" class="card-img">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">The Story of Maharaja Agrasen </h5>
+                                            <p class="card-text short-content">Maharaja Agrasen, a legendary king and a symbol of compassion and justice, is deeply revered in Indian history for his profound contributions to society. One of his most significant acts was putting an end to animal sacrifices during religious rituals and replacing them with the symbolic breaking of coconuts. </p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 6 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">The Kingdom of Maharaja Agrasen</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Maharaja Agrasen was a king of the Suryavanshi dynasty (solar lineage) and ruled the prosperous city of Agroha (located in present-day Haryana). He was known for his wisdom, fairness, and emphasis on social welfare. His kingdom flourished under the principles of equality, peace, and prosperity.
+                                                        <br><br>During his reign, the prevalent societal and religious customs involved animal sacrifices to please deities, a practice that was deeply rooted in ancient traditions. These sacrifices were performed to invoke divine blessings for prosperity, success, and protection. However, Maharaja Agrasen was a staunch believer in ahimsa (non-violence) and saw these rituals as acts of unnecessary cruelty.                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Opposition to Animal Sacrifices</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Maharaja Agrasen strongly opposed the idea of taking innocent lives in the name of religion. He believed that such practices contradicted the fundamental values of compassion and justice. Instead of earning divine blessings, he saw these rituals as creating negative karma and distress in society.
+                                                        <br><br>His stance was not easily accepted by religious leaders and traditionalists at the time, as animal sacrifices were considered a sacred and integral part of many rituals. However, Maharaja Agrasen's unwavering commitment to ahimsa inspired him to find a compassionate alternative.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Introducing Coconut Breaking as a Ritual</h5>
+                                                    <p class="paragraph1">
+                                                        <br>To replace animal sacrifices, Maharaja Agrasen introduced the practice of breaking coconuts during rituals. The coconut, with its hard outer shell and sweet water inside, symbolized the ego and inner purity. Breaking the coconut represented:
+                                                        <br><br><b>•	Offering to the divine:</b> The act symbolized surrendering one's ego to God.
+                                                        <br><br><b>•	Symbolic sacrifice:</b> The cracking of the shell was seen as a symbolic, non-violent "sacrifice" without causing harm to any living being.
+                                                        <br><br><b>•	Purity and auspiciousness:</b> The coconut, considered a sacred fruit in Indian culture, was seen as a pure and acceptable offering to the deities.
+                                                        <br><br>This practice quickly gained acceptance and became an integral part of Hindu rituals, replacing the cruel act of animal sacrifices.      
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+
+                                    <!--Row 2 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Maharaja Agrasen's Broader Vision</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Maharaja Agrasen’s reform was not limited to religious rituals. He envisioned a society built on principles of:
+                                                        <br><br><b>•	Compassion:</b> Extending kindness not just to humans but to all living beings.
+                                                        <br><br><b>•	Equality:</b> Ensuring justice and dignity for everyone, regardless of their social status.
+                                                        <br><br><b>•	Prosperity through collaboration:</b> He introduced the famous concept of contributing one coin and one brick by each citizen for any new family that settled in Agroha, promoting collective growth.
+                                                        <br><br>By banning animal sacrifices, Maharaja Agrasen set an example of ethical and sustainable leadership, emphasizing harmony between humans and nature.    
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Legacy of Maharaja Agrasen</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Today, Maharaja Agrasen is remembered as a pioneer of non-violence and compassion. The practice of breaking coconuts continues as an integral part of Hindu rituals, symbolizing purity, prosperity, and the rejection of unnecessary violence. His story inspires countless people to lead lives rooted in kindness, justice, and humanity.
+                                                        <br><br>In honor of his legacy, communities like the Agarwal and Agrahari trace their origins to Maharaja Agrasen and continue to celebrate his teachings of non-violence, equality, and selfless service.                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 2 End-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box 6 End -->
+
+
+                        <!-- Content Box 7 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/historicalicons.jpg" class="card-img" alt="Veg India">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Stories of Historical Figures Embracing Vegetarianism and Non-Violence</h5>
+                                            <p class="card-text short-content">Throughout history, many individuals, saints, and societies have chosen to abandon non-vegetarian practices and the killing of animals, embracing vegetarianism as a way of life. These stories reflect a deep commitment to compassion, non-violence, and spiritual progress. </p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 7 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body1">
+                                                    <h5 class="card-title1">Emperor Ashoka: The Compassionate King</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 3rd Century BCE</b> 
+                                                        <br><br><b>Region: Indian Subcontinent</b> 
+                                                        <br><br>Emperor Ashoka ruled one of the largest empires in Indian history, the Mauryan Empire. Known for his earlier conquests, Ashoka’s transformation came after the Kalinga War, which caused massive bloodshed and suffering. Deeply disturbed by the violence, he turned to Buddhism and adopted ahimsa (non-violence) as a core principle of governance.
+                                                        <br><br>•	Ashoka prohibited animal sacrifices and hunting in royal rituals.
+                                                        <br><br>•	He issued edicts carved into rocks and pillars, promoting kindness towards animals and urging his subjects to reduce the slaughter of living beings.
+                                                        <br><br>•	To further this cause, he built hospitals for animals and passed laws to protect wildlife.
+                                                        <br><br>Ashoka’s teachings reached far beyond his empire, spreading vegetarian ideals across South and Southeast Asia.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body1">
+                                                    <h5 class="card-title1">Mahavira: The Jain Tirthankara</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 6th Century BCE</b>
+                                                        <br><br><b>Region: Indian Subcontinent</b>
+                                                        <br><br>Mahavira, the 24th Tirthankara of Jainism, established ahimsa as the central tenet of the faith. He taught that all living beings possess a soul and that harming even the smallest organism causes spiritual harm.
+                                                        <br><br>•	Under his influence, Jain communities strictly adopted vegetarianism and even avoided root vegetables to minimize harm to microorganisms.
+                                                        <br><br>•	Mahavira inspired countless followers to give up non-vegetarian diets and instead practice restraint and compassion.
+                                                        <br><br>The Jain tradition continues to exemplify one of the most rigorous forms of ethical vegetarianism in the world.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body1">
+                                                    <h5 class="card-title1">Saint Basaveshwara and the Lingayat Movement</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 12th Century CE</b>
+                                                        <br><br><b>Region: Karnataka, India</b>
+                                                        <br><br>Saint Basaveshwara, a social reformer, started the Lingayat movement, which emphasized equality, simplicity, and non-violence. He opposed rituals that involved animal sacrifice and encouraged his followers to adopt vegetarianism as a moral choice.
+                                                        <br><br>•	Basaveshwara believed in the sanctity of all life and saw killing animals as a betrayal of divine principles.
+                                                        <br><br>•	His teachings led to the creation of vegetarian communities in southern India that valued non-violence as a key aspect of their spiritual practice.
+                                                        <br><br>His movement transformed societal attitudes toward consumption and compassion.    
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+
+                                    <!--Row 2 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Sant Kabir: The Bhakti Saint</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 15th Century CE</b>
+                                                        <br><b>Region: Northern India</b>
+                                                        <br><br>Sant Kabir was a mystic poet who spoke against societal ills, including the practice of animal sacrifices and non-vegetarianism. His poems, known as dohas, emphasized simplicity and compassion for all living beings.
+                                                        <br><br>•	Kabir criticized rituals involving the killing of animals, calling for spiritual purity through non-violence.
+                                                        <br><br>•	He encouraged people to abandon cruelty and adopt vegetarianism as an expression of divine love.
+                                                        <br><br>Kabir’s message resonated with millions and continues to inspire those seeking a life of peace and kindness.    
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">Gautama Buddha: The Enlightened One</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 5th–4th Century BCE</b>
+                                                        <br><br><b>Region: Indian Subcontinent</b>
+                                                        <br><br>Gautama Buddha, the founder of Buddhism, taught his followers to practice karuna (compassion) and avoid harming any sentient being. He believed that spiritual liberation could only be achieved by living harmoniously with nature.
+                                                        <br><br>•	Although Buddha himself did not mandate strict vegetarianism, he discouraged the killing of animals for food and rituals.
+                                                        <br><br>•	Many Buddhist traditions, especially Mahayana Buddhism, adopted vegetarianism as a core practice.
+                                                        <br><br>Buddha’s teachings spread across Asia, influencing countless communities to practice kindness and non-violence toward animals.
+                                                            
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body2">
+                                                    <h5 class="card-title1">The Bishnoi Community: Protectors of Nature</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 15th Century CE</b>
+                                                        <br><b>Region: Rajasthan, India</b>
+                                                        <br><br>The Bishnoi community, founded by Guru Jambheshwar (Jambhoji), practices 29 principles, many of which emphasize environmental and animal conservation.
+                                                        <br><br>•	Bishnois strictly avoid consuming meat and are known for their willingness to sacrifice their lives to protect trees and animals.
+                                                        <br><br>•	In a famous incident, 363 Bishnois sacrificed their lives to protect Khejri trees from being cut down in Rajasthan.
+                                                        <br><br>Their way of life exemplifies a deep commitment to vegetarianism and non-violence.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 2 End-->
+
+                                    <!--Row 3 Start-->
+                                    <div class="row g-4 "style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Guru Nanak: The Founder of Sikhism</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 15th–16th Century CE</b>
+                                                        <br><b>Region: Punjab, India</b>
+                                                        <br><br>Guru Nanak, the founder of Sikhism, emphasized compassion and ethical living. While Sikhism does not mandate vegetarianism, Guru Nanak spoke against unnecessary harm to animals.
+                                                        <br><br>•	He discouraged rituals that involved animal sacrifices.
+                                                        <br><br>•	His teachings encouraged followers to reflect on their actions and live a life of kindness.
+                                                        <br><br>Many Sikhs, inspired by his principles, choose vegetarianism as a way to practice non-violence.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">King Harsha: A Vegetarian Monarch</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 7th Century CE</b>
+                                                        <br><b>Region: North India</b>
+                                                        <br><br>King Harsha of Kannauj was a devout Buddhist who promoted vegetarianism during his reign.
+                                                        <br><br>•	He banned hunting and animal sacrifices in his kingdom.
+                                                        <br><br>•	At royal feasts, only vegetarian food was served, reflecting his commitment to non-violence.
+                                                        <br><br>Harsha’s reign is remembered for its emphasis on peace, justice, and compassion.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Swami Dayananda Saraswati and Arya Samaj</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 19th Century CE</b>
+                                                        <br><b>Region: India</b>
+                                                        <br><br>Swami Dayananda Saraswati, the founder of Arya Samaj, condemned animal sacrifices and advocated for vegetarianism as part of a return to Vedic principles.
+                                                        <br><br>•	He argued that rituals involving harm to animals were contrary to true spiritual teachings.
+                                                        <br><br>•	Swami Dayananda’s movement inspired a revival of vegetarianism in Hindu communities during the colonial era.
+                                                        <br><br>His work laid the foundation for modern ethical vegetarianism in India.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 3 End-->
+
+                                    <!--Row 4 Start-->
+                                    <div class="row g-4">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Mahatma Gandhi: The Modern Icon of Non-Violence</h5>
+                                                    <p class="paragraph1">
+                                                        <br><b>Era: 20th Century CE</b>
+                                                        <br><b>Region: India</b>
+                                                        <br><br>Mahatma Gandhi saw vegetarianism as essential to the practice of ahimsa (non-violence). Influenced by Jain teachings, Gandhi believed that a vegetarian diet was not only healthier but also morally superior.
+                                                        <br><br>•	He experimented with food to find the simplest, most sustainable way of living without harming animals.
+                                                        <br><br>•	His advocacy for vegetarianism inspired movements for animal rights and ethical living worldwide.
+                                                        <br><br>Gandhi’s principles continue to guide those seeking peace and compassion.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Learnings</h5>
+                                                    <p class="paragraph1">
+                                                        <br>These stories highlight an enduring commitment to compassion, spiritual growth, and ecological balance. They remind us that embracing a vegetarian lifestyle goes beyond dietary preferences—it is a profound expression of respect for all living beings and the natural world. Each story serves as an inspiration to make choices rooted in kindness and non-violence. Our ancestors lived peaceful and harmonious lives as pure vegetarians, leaving behind countless examples and evidence of this way of life.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 4 End-->                                                                            
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box 7 End -->
+
+
+                        <!-- Content Box 8 Start -->
+                        <div class="col-lg-8 col-lg-10 col-sm-12 mb-5">
+                            <div class="card shadow-lg hover-zoom">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="/img/sanatan.jpg" class="card-img">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sanatan Dharma: The Way of Living </h5>
+                                            <p class="card-text short-content">Sanatan Dharma, often referred to as the eternal way of life, emphasizes harmony with nature, compassion, and spiritual growth. Pure vegetarian food aligns deeply with these principles, advocating for non-violence (Ahimsa) and respect for all living beings. Vegetarianism is not only a dietary choice but a spiritual practice, as it minimizes harm to animals and promotes a lifestyle of purity, simplicity, and mindfulness, which are key tenets of Sanatan Dharma.
+                                            </p>
+                                            <button class="btn btn-primary read-more-btn" onclick="toggleGrid(this)">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Expandable Grid for Box 8 -->
+                                <div class="hidden-grid d-none mt-3">
+                                    
+                                    <!--Row 1 Start-->
+                                    <div class="row g-4" style="margin-bottom: 20px;">
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Sanatan Dharma</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Sanatan Dharma, meaning "eternal order," is a holistic way of life that guides individuals to live harmoniously with nature, society, and the universe. Rooted in timeless wisdom from sacred texts like the Vedas, Upanishads, and Bhagavad Gita, it emphasizes universal values such as truth (Satya), non-violence (Ahimsa), compassion, and selfless service (Seva). This way of living fosters spiritual growth through practices like meditation, yoga, devotion (Bhakti), and the pursuit of knowledge (Jnana). Sanatan Dharma respects diversity, embracing paths suitable to individual temperaments and aspirations, while aiming for ultimate liberation (Moksha) and unity with the divine.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">The Story of King Rantideva:</h5>
+                                                    <p class="paragraph1">
+                                                        <br>King Rantideva was renowned for his compassion and dedication to serving others. Despite being a king, he lived a simple life, sustaining himself on a sattvic vegetarian diet. One day, while fasting, he received visitors—a beggar, a cowherd, and a hunter—each asking for food and water. Despite his hunger, he offered everything he had, believing in the principle that feeding others is like serving the divine. His pure heart and vegetarian lifestyle symbolized the Sanatan Dharma principle of selflessness and respect for all life forms.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <div class="card grid-card shadow-sm">
+                                                <div class="card-body4">
+                                                    <h5 class="card-title1">Sage Kapila and the Cow:</h5>
+                                                    <p class="paragraph1">
+                                                        <br>Sage Kapila taught that all beings are interconnected and that harming animals disrupts the natural balance. He used the cow as an example of how animals support life through their offerings like milk while expecting little in return. His teachings inspired many to adopt a vegetarian diet to honor the mutual dependence between humans and nature.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Row 1 End-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Box  End -->                        
+                        
+                    </div>
+                </div>
+            </section>
+            <!--Main Section End-->  
+
+        </main>
+		
+        <!-- Footer Start-->
+        <footer class="site-footer section-padding1">
+            <div class="container" style="padding-left: 40px;">
+                <div class="row" >
+
+                    <div class="col-sm">
+                        <table>
+                            <tr>
+                                <td class="footer-td" style="padding-bottom: 10px;"><a href="/">
+                                    <img src="/img/Logo.png" style="max-width: 150px; border-radius: 100%;"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="footer-td">
+                                    <a href="/"><h3>Pavnam</h3></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-sm">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="/" class="site-footer-link">Home</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="/certification" class="site-footer-link">About Certification</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="/about" class="site-footer-link">About us</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="/vegrevolution" class="site-footer-link">Veg Revolution</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a class="site-footer-link" href="/supporting">Supporting Cause</a>
+                            </li>     
+
+                            <li class="site-footer-link-item">
+                                <a href="/faq" class="site-footer-link">FAQs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="/contact" class="site-footer-link">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <ul class="site-footer-links">
+
+
+                            
+                            <li class="site-footer-link-item">
+                                <a href="tel: 305-240-9671" class="site-footer-link"> 305-240-9671 </a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="mailto:info@pavnam.com" class="site-footer-link">info@pavnam.com</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <div class="row justify-content-left" style="padding-top: 5px;">
+                                    <!-- Facebook -->
+                                    <div class="col-3 col-sm-1">
+                                        <a href="https://facebook.com" target="_blank" class="social-link">
+                                            <i class="bi bi-facebook "></i>
+                                        </a>
+                                    </div>
+                        
+                                    <!-- Instagram -->
+                                    <div class="col-3 col-sm-1">
+                                        <a href="https://instagram.com" target="_blank" class="social-link">
+                                            <i class="bi bi-instagram "></i>
+                                        </a>
+                                    </div>
+                        
+                                    <!-- Twitter -->
+                                    <div class="col-3 col-sm-1">
+                                        <a href="https://twitter.com" target="_blank" class="social-link">
+                                            <i class="bi bi-twitter "></i>
+                                        </a>
+                                    </div>
+                        
+                                    <!-- LinkedIn -->
+                                    <div class="col-3 col-sm-1">
+                                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                                            <i class="bi bi-linkedin "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="site-footer-link-item" style="margin-top: 15px;">
+                                <a class="btn custom-btn3" href="/pavnamcms">Login <i class="bi bi-person-circle"></i> </a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <div class="dropdown" style="margin-top: 10px;">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    English</button>
+        
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Hindi</button></li>
+        
+                                        <li><button class="dropdown-item" type="button">Tamil</button></li>
+        
+                                        <li><button class="dropdown-item" type="button">Kannada</button></li>
+                                    </ul>
+                                </div> 
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="row">
+                    <div class="col-12  text-center">
+                        <div class="line align-items-center"></div> 
+                        <p class="copyright-text"> Copyright © 2024 <a href="/">Pavnam</a>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Footer END-->
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTopBtn" title="Go to top"><i class="bi bi-chevron-double-up"></i></button>
+        
+        <!-- JAVASCRIPT FILES -->
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/jquery.sticky.js"></script>
+        <script src="/js/scrollToTopBtn.js"></script>
+        <script src="/js/custom.js"></script>
+
+    </body>
+</html>            
