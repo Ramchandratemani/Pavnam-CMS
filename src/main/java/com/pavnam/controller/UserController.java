@@ -97,7 +97,8 @@ public class UserController {
     }
 
     @GetMapping("/cmsindex")
-    public String cmsIndex() {
+    public String cmsIndex(Authentication authentication) {
+            System.out.println(authentication.getAuthorities());
         return "cmsindex"; // CMS dashboard
     }
 

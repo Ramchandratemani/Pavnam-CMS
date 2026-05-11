@@ -32,9 +32,9 @@ public class WebConfig {
 				
 				// Role-based access control
 				.requestMatchers("/dealer/admin-dashboard", "/admin-dashboard", "/api/dealer/**", "/uploads/**", "/dealer/**", 
-					"dealer/certifiedUserDetails").hasAuthority("ADMIN")
+					"/dealer/certifiedUserDetails").hasAuthority("ADMIN")
 				.requestMatchers("/superadmin/superadmin-dashboard", "/superadmin-dashboard", "/uploads/**", "/superadmin/**", 
-					"superadmin/profile").hasAuthority("SUPERADMIN")
+					"/superadmin/profile").hasAuthority("SUPERADMIN")
 				.requestMatchers("/cmsindex").hasAnyAuthority("USERS", "ADMIN", "SUPERADMIN")
 				
 				// Secure all other requests
