@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
@@ -70,6 +71,9 @@ public class UserController {
     
     @Autowired
     private JavaMailSender mailSender;
+
+    @Value("${app.base-url}")
+    private String appBaseUrl;
 
     // Helper method to create and save a User object
     private Users createAndSaveUser(String username, String email, String password, String roleName) {
@@ -278,7 +282,8 @@ public class UserController {
             uRepository.save(user); // Save the user with the token
     
             // Send the email with the reset link
-            String resetLink = "http://localhost:8080/reset-password?token=" + token;
+            // String resetLink = "http://localhost:8080/reset-password?token=" + token;
+            String resetLink = appBaseUrl + "/reset-password?token=" + token;
             sendResetEmail(email, resetLink);
     
             // Notify the user that the email has been sent
