@@ -35,9 +35,9 @@ public class WebConfig {
 					"/dealer/certifiedUserDetails").hasAuthority("ADMIN")
 				.requestMatchers("/superadmin/superadmin-dashboard", "/superadmin-dashboard", "/uploads/**", "/superadmin/**", 
 					"/superadmin/profile").hasAuthority("SUPERADMIN")
-				// .requestMatchers("/cmsindex").hasAnyAuthority("USERS", "ADMIN", "SUPERADMIN")
-				.requestMatchers("/cmsindex").permitAll()
-				
+				.requestMatchers("/cmsindex").hasAnyAuthority("USERS", "ADMIN", "SUPERADMIN")
+				// .requestMatchers("/cmsindex").permitAll()
+
 				// Secure all other requests
 				.anyRequest().authenticated()
 			)
