@@ -38,7 +38,7 @@ public class SuperAdmin {
     private String password;
 
     @Column(nullable = false)
-    private String role = "SuperAdmin";
+    private String role = "SUPERADMIN";
 
     
 
