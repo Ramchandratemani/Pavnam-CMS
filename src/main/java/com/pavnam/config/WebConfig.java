@@ -31,9 +31,9 @@ public class WebConfig {
 					"/vegrevolution", "/index", "/").permitAll()
 				
 				// Role-based access control
-				.requestMatchers("/dealer/admin-dashboard", "/api/dealer/**", "/uploads/**", "/dealer/**", 
+				.requestMatchers("/dealer/admin-dashboard", "/admin-dashboard", "/api/dealer/**", "/uploads/**", "/dealer/**", 
 					"dealer/certifiedUserDetails").hasAuthority("ADMIN")
-				.requestMatchers("/superadmin/superadmin-dashboard", "/uploads/**", "/superadmin/**", 
+				.requestMatchers("/superadmin/superadmin-dashboard", "/superadmin-dashboard", "/uploads/**", "/superadmin/**", 
 					"superadmin/profile").hasAuthority("SUPERADMIN")
 				.requestMatchers("/cmsindex").hasAnyAuthority("USERS", "ADMIN", "SUPERADMIN")
 				
