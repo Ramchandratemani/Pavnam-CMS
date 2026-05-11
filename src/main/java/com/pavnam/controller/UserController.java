@@ -42,7 +42,6 @@ import com.pavnam.service.FileStorageService;
 
 import jakarta.validation.Valid;
 
-@Configuration
 @Controller
 public class UserController {
 
@@ -96,10 +95,21 @@ public class UserController {
         return "index"; // Landing page
     }
 
+    // @GetMapping("/cmsindex")
+    // public String cmsIndex(Authentication authentication) {
+    //         System.out.println(authentication.getAuthorities());
+    //     return "cmsindex"; // CMS dashboard
+    // }
     @GetMapping("/cmsindex")
     public String cmsIndex(Authentication authentication) {
+
+        System.out.println(authentication);
+
+        if(authentication != null) {
             System.out.println(authentication.getAuthorities());
-        return "cmsindex"; // CMS dashboard
+        }
+
+        return "cmsindex";
     }
 
     @GetMapping("/register")
